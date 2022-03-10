@@ -6,6 +6,7 @@ int eleccion=0;
         while(true){
             System.out.println("1: Ejercicio 1 (Dados)");
             System.out.println("2: Ejercicio 2 (Clientes)");
+            System.out.println("2: Ejercicio 2 (Barcos II)");
             
     try{
         eleccion=teclado.nextInt();
