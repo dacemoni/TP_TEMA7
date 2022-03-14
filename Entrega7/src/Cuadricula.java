@@ -70,7 +70,8 @@ public class Cuadricula {
 	}
 
 	public void creacionBarcos(Scanner teclado) {
-		Scanner teclado1 = new Scanner(System.in);
+		//Scanner teclado1 = new Scanner(System.in); // porque se abre cuando traemos teclado como argumento?
+		
 		int opcion;
 		rellenarreglas();
 		rellenar();
@@ -79,13 +80,15 @@ public class Cuadricula {
 		do {
 			System.out.println("\nElija una de las opciones: ");
 			menu2();
-			opcion = teclado1.nextInt();
+			//opcion = teclado1.nextInt();
+			opcion = teclado.nextInt();
 			switch (opcion) {
 			case 1:		
 				do {
 					System.out.println("\n¿Qué tipo de barco quieres crear? ");
 					menu3();
-					opcion = teclado1.nextInt();
+					//opcion = teclado1.nextInt();
+					opcion = teclado.nextInt();
 					switch (opcion) {
 					case 1:
 						for (int i=5;i<9;i++){
