@@ -4,7 +4,7 @@ Ejercicios realizado por:
 
 Gabriel Pelegri Riis 
 
-Victor
+Victor Navarro Carrillo
 
 David César Moro Nieto 
 
