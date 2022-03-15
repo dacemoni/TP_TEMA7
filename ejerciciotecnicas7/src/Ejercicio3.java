@@ -1,5 +1,3 @@
-package ejercicioBarcos;
-
 import java.util.Scanner;
 
 public class Ejercicio3 extends Cuadricula {
@@ -19,7 +17,7 @@ public class Ejercicio3 extends Cuadricula {
 			switch (opcion) {
 			case 1:
 				mostrarreglas();
-				System.out.println("\n*** En nuestro caso solo habrá un submarino ***");
+				System.out.println("\n*** En nuestro caso solo habrÃ¡ un submarino ***");
 				break;
 			case 2:
 				mostartablero();
@@ -32,10 +30,10 @@ public class Ejercicio3 extends Cuadricula {
 				depositarBarco(teclado);
 				break;
 			case 5:
-				System.out.println("Adiós.");
+				System.out.println("AdiÃ³s.");
 				break;
 			default:
-				System.out.println("La opción elegida no existe.");
+				System.out.println("La opciÃ³n elegida no existe.");
 			} 
 		}
 		while (opcion != 5);	
@@ -47,25 +45,22 @@ public class Ejercicio3 extends Cuadricula {
 				filaSeleccionada = teclado.nextLong();
 				System.out.println("Escoja una columna: ");
 				columnaSeleccionada = teclado.nextInt() - 1;
-
 				try {
 					acierto = tablero.disparar(filaSeleccionada, columnaSeleccionada);
 				} catch (IndexOutOfBoundsException e) {
 					System.out.println("No se puede seleccionar esa casilla.");
 				}
-
 				if (acierto) {
-					System.out.println("¡Has acertado!");
+					System.out.println("Â¡Has acertado!");
 					tablero.visualizacion();
 				} else {
-					System.out.println("Inténtelo de nuevo.");
+					System.out.println("IntÃ©ntelo de nuevo.");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("Introduzca caracteres numéricos.");
+				System.out.println("Introduzca caracteres numÃ©ricos.");
 				teclado.nextLine();
 			}
 		} while (!acierto);
-
 	}
 		 */
 	

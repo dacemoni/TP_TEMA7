@@ -1,5 +1,3 @@
-package ejercicioBarcos;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,26 +17,28 @@ public class Cuadricula {
 
 	public void depositarBarco(Scanner teclado) {
 		System.out.println("Dime posicion primero letra y despues numero");
+		teclado.nextLine(); // para consumir /n, sino user no funciona
 		user = teclado.nextLine();
 		posx=letraanum(user);
 		posy = Integer.parseInt(user.substring(1));
 		String posxy = posx + "," + posy;
 		System.out.println(posxy);
 		if (posx == 0 || posy > 10 ){
-			System.out.println("Tienes que irntroducir una posiciÛn v·lida" + posx + posy);
+			System.out.println("Tienes que irntroducir una posici√≥n v√°lida" + posx + posy);
 		}
 	}
 
 	public void disparar(Scanner teclado) {
 		do{
 			System.out.println("Dime posicion primero letra y despues numero");
+			teclado.nextLine(); // para consumir /n, sino user no funciona
 			user = teclado.nextLine();
 			posx=letraanum(user);
 			posy = Integer.parseInt(user.substring(1));
 			String posxy = posx + "," + posy;
 			System.out.println(posxy);
 			if (posx == 0 || posy > 10 ){
-				System.out.println("Tienes que irntroducir una posiciÛn v·lida" + posx + posy);
+				System.out.println("Tienes que irntroducir una posici√≥n v√°lida" + posx + posy);
 			}else{
 				boolean comprobacion=false;
 				for(int i = 0; i < barcos.size(); i++){
@@ -72,7 +72,8 @@ public class Cuadricula {
 	}
 
 	public void creacionBarcos(Scanner teclado) {
-		Scanner teclado1 = new Scanner(System.in);
+		//Scanner teclado1 = new Scanner(System.in); // porque se abre cuando traemos teclado como argumento?
+		
 		int opcion;
 		rellenarreglas();
 		rellenar();
@@ -81,13 +82,15 @@ public class Cuadricula {
 		do {
 			System.out.println("\nElija una de las opciones: ");
 			menu2();
-			opcion = teclado1.nextInt();
+			//opcion = teclado1.nextInt();
+			opcion = teclado.nextInt();
 			switch (opcion) {
 			case 1:		
 				do {
-					System.out.println("\nøQuÈ tipo de barco quieres crear? ");
+					System.out.println("\n¬øQu√© tipo de barco quieres crear? ");
 					menu3();
-					opcion = teclado1.nextInt();
+					//opcion = teclado1.nextInt();
+					opcion = teclado.nextInt();
 					switch (opcion) {
 					case 1:
 						for (int i=5;i<9;i++){
@@ -118,7 +121,7 @@ public class Cuadricula {
 					case 5:
 						break;
 					default:
-						System.out.println("La opciÛn elegida no existe.");
+						System.out.println("La opci√≥n elegida no existe.");
 					} 
 				}
 				while (opcion != 5);
@@ -147,14 +150,14 @@ public class Cuadricula {
 			case 3:
 				break;
 			default:
-				System.out.println("La opciÛn elegida no existe.");
+				System.out.println("La opci√≥n elegida no existe.");
 			} 
 		}
 		while (opcion != 5);
 	}
 
 	private static void menu2() {
-		System.out.println("1 - Personalizado (jugar·s solo con los tipos de barcos que elijas)");
+		System.out.println("1 - Personalizado (jugar√°s solo con los tipos de barcos que elijas)");
 		System.out.println("2 - Normal (todos los barcos del juego normal)");
 		System.out.println("3 - Salir.");
 	}
@@ -194,14 +197,14 @@ public class Cuadricula {
 	}
 
 	public void rellenarreglas(){
-		reglas[0] = "\nReglas B·sicas de la batalla\n";
+		reglas[0] = "\nReglas B√°sicas de la batalla\n";
 		reglas[1] = "El objetivo del juego es adivinar donde estan los barcos de tu oponente";
-		reglas[2] = "Cuando se te indique que digas una posiciÛn, tienes que decir una letra y un numero";
-		reglas[3] = "\nSimbologÌa:\n";
+		reglas[2] = "Cuando se te indique que digas una posici√≥n, tienes que decir una letra y un numero";
+		reglas[3] = "\nSimbolog√≠a:\n";
 		reglas[4] = "* - Cuadro oculto: no se sabe lo que hay, esa posicion no la has dicho";
-		reglas[5] = "~ - Esto es agua, has fallado y ahÌ no hay barco";
+		reglas[5] = "~ - Esto es agua, has fallado y ah√≠ no hay barco";
 		reglas[6] = "+ - Tocado: has dado a un barco, pero no le has hundido";
-		reglas[7] = "X - Hundido: cuando hayas tocado por completo al barco, este pasar· a estar hundido";
+		reglas[7] = "X - Hundido: cuando hayas tocado por completo al barco, este pasar√° a estar hundido";
 		reglas[8] = "\nFLOTA ENEMIGA:\n";
 		reglas[9] = "Un Portaaviones(Ocupa 4 espacios), Dos Acorazados(3 posiciones cada uno)";
 		reglas[10] = "Tres Buques(2 posiciones cada uno) y Cuatro Submarinos(1 posicion cada uno)";

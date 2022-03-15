@@ -1,5 +1,3 @@
-package ejercicioBarcos;
-
 import java.util.Scanner;
 
 public class Ejercicio4 extends Cuadricula {
@@ -19,7 +17,7 @@ public class Ejercicio4 extends Cuadricula {
 			switch (opcion) {
 			case 1:
 				mostrarreglas();
-				System.out.println("\n*** En nuestro caso solo habr· un submarino ***");
+				System.out.println("\n*** En nuestro caso solo habr√° un submarino ***");
 				System.out.println("*** Y se compite contra la maquina para ver quien gana ***");
 				break;
 			case 2:
@@ -33,10 +31,10 @@ public class Ejercicio4 extends Cuadricula {
 				depositarBarco(teclado);
 				break;
 			case 5:
-				System.out.println("AdiÛs.");
+				System.out.println("Adi√≥s.");
 				break;
 			default:
-				System.out.println("La opciÛn elegida no existe.");
+				System.out.println("La opci√≥n elegida no existe.");
 			} 
 		}
 		while (opcion != 5);	

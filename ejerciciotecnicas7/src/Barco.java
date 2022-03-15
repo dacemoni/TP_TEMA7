@@ -1,5 +1,3 @@
-package ejercicioBarcos;
-
 import java.util.ArrayList;
 
 public class Barco {
@@ -51,7 +49,7 @@ public class Barco {
     
     @Override
     public String toString() {
-        return "barco{" + nombre + ", tamaño=" + tamano + ", posicion = " + posicion + '}';
+        return "barco{" + nombre + ", tamaÃ±o=" + tamano + ", posicion = " + posicion + '}';
     }
 
 }
