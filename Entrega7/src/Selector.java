@@ -19,7 +19,10 @@ int eleccion=0;
         break;
         case 2:Ejercicio2.Lanzar(teclado);
         break;
-        case 3:break;
+        case 3:
+        	//Ejercicio3.juegoBarcos3(); // ej 3 y 4 no son staticos, como quieres hacerlos david?
+        	break;
+        	
         case 4:break;
         
         default:break;
