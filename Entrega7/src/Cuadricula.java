@@ -17,6 +17,7 @@ public class Cuadricula {
 
 	public void depositarBarco(Scanner teclado) {
 		System.out.println("Dime posicion primero letra y despues numero");
+		teclado.nextLine(); // para consumir /n, sino user no funciona
 		user = teclado.nextLine();
 		posx=letraanum(user);
 		posy = Integer.parseInt(user.substring(1));
@@ -30,6 +31,7 @@ public class Cuadricula {
 	public void disparar(Scanner teclado) {
 		do{
 			System.out.println("Dime posicion primero letra y despues numero");
+			teclado.nextLine(); // para consumir /n, sino user no funciona
 			user = teclado.nextLine();
 			posx=letraanum(user);
 			posy = Integer.parseInt(user.substring(1));
