@@ -21,6 +21,8 @@ int eleccion=0;
         break;
         case 3:
         	//Ejercicio3.juegoBarcos3(); // ej 3 y 4 no son staticos, como quieres hacerlos david?
+        	Ejercicio3 asdf = new Ejercicio3();
+        	asdf.juegoBarcos3();
         	break;
         	
         case 4:break;
